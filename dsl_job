@@ -1,0 +1,18 @@
+job('job_dsl_mailer') {
+    description('This is my awesome Job')
+  
+    parameters {
+        stringParam('Planet', defaultValue = 'world', description = 'This is the world')
+        booleanParam('FLAG', true)
+        choiceParam('Name', ['From Ark', 'From Ak', 'From Arkyyy'])
+    }
+
+    steps {
+        // Access the value of the Name parameter directly
+        shell('echo "Hello World \${Name}"')
+    }
+
+    publishers {
+        mailer('atharvakavale21@gmail.com.com', true, true)
+    }
+}
