@@ -1,4 +1,4 @@
-job('job_dsl_mailer') {
+job('job_dsl_mailer_git') {
     description('This is my awesome Job')
   
     parameters {
